@@ -1,16 +1,36 @@
-# React + Vite
+## 🌐 Modern Professional Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal portfolio website built using React.js and Tailwind CSS. It professionally showcases my projects, skill set, and contact information.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+## 🚀 Live Preview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+https://emon-ahmed.netlify.app/
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Key Features
+
+- Modern UI/UX : attractive typewriter animation.
+- Skill Progress Bars : Visual representation of my technical skills.
+- Responsive Design : Perfect layout on all devices—PC and mobile.
+- Interactive Project Section : Live demo and code link with mouse hover effect.
+- Contact Form : The convenience of sending direct messages.
+
+
+## 🛠️ Technologies Used
+
+- **Framework** : React.js.
+- **Styling** : Tailwind CSS & Sass/Scss. 
+- **Animations** : Framer Motion / CSS Keyframes. 
+- **Deployment** : Netlify. 
+
+
+## 📸 Screenshots
+
+![App Screenshot](https://i.ibb.co.com/vvYVBkf5/Screenshot-2025-12-25-202928.png)
+
+![App Screenshot](https://i.ibb.co.com/jvwsG5Td/Screenshot-2025-12-25-202910.png)
+
+
+![App Screenshot](https://i.ibb.co.com/vxhfWLjH/Screenshot-2025-12-25-202857.png)
