@@ -6,7 +6,7 @@ function FloatingProfile() {
     <div className="fixed bottom-6 right-6 z-[999]">
       <a
         href={resume}
-        download
+        download="Emon_Ahmed_Web_Developer_Resume.pdf"
       >
         <button className="bg-primary text-white rounded-lg shadow-lg flex items-center py-3 px-5 hover:opacity-90 transition-opacity duration-200">
           <img
