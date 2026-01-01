@@ -1,5 +1,5 @@
 import me from '../assets/Emon-Ahmed.webp';
-import resume from '../assets/Emon Ahmed.pdf';
+import resume from '../assets/Resume of Emon.pdf';
 
 function FloatingProfile() {
   return (
