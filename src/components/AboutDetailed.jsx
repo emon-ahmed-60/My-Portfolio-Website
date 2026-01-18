@@ -1,5 +1,4 @@
 import me from "../assets/Emon-Ahmed.webp";
-import resume from '../assets/Emon Ahmed.pdf'
 import { motion } from "framer-motion";
 function AboutDetailed() {
   return (
