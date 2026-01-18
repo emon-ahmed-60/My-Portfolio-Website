@@ -4,6 +4,7 @@ import FloatingProfile from "./components/FloatingProfile";
 import AboutDetailed from "./components/AboutDetailed";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import Services from "./components/Services";
 import Contact from "./components/Contact";
 
 
@@ -17,6 +18,7 @@ function App() {
         <AboutDetailed />
         <Projects />
         <Skills />
+        <Services />
         <Contact />
       </main>
       <FloatingProfile />
