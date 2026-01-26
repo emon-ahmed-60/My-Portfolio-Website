@@ -1,11 +1,11 @@
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { scroller } from 'react-scroll'
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link, scroller } from 'react-scroll';
 
 function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const navLinks = [
     { name: 'HOME', to: 'home' },
@@ -14,16 +14,18 @@ function Header() {
     { name: 'SKILLS', to: 'skills' },
     { name: 'SERVICES', to: 'services' },
     { name: 'CONTACT', to: 'contact' },
-  ]
+  ];
 
-  // Custom click handler to prevent default behavior and use scroller
-  const handleScrollToSection = (target) => {
-    scroller.scrollTo(target, {
+  // Keep this for the logo button if needed, or convert it to Link too.
+  // Converting logo to Link for consistency is better but the prompt focused on menu items.
+  // I will keep manual handler for the logo for now as it's a specific "Scroll to home" action not part of the main nav loop in the same way.
+  const handleScrollToHome = () => {
+    scroller.scrollTo('home', {
       smooth: true,
       duration: 500,
-      offset: -80, // Offset for sticky header
-    })
-  }
+      offset: -80,
+    });
+  };
 
   return (
     <motion.header
@@ -36,27 +38,25 @@ function Header() {
         <div className="flex justify-between items-center border-b border-gray-200 dark:border-gray-700 pb-4 relative">
           <button
             className="bg-gray-800 dark:bg-gray-100 text-white dark:text-gray-800 rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl font-display cursor-pointer transition-transform hover:scale-110"
-            onClick={() => handleScrollToSection('home')}
+            onClick={handleScrollToHome}
             aria-label="Scroll to home section"
           >
             E
           </button>
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <span
+              <Link
                 key={link.name}
+                to={link.to}
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
+                activeClass="active"
                 className="nav-link text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors cursor-pointer"
-                onClick={() => handleScrollToSection(link.to)}
-                role="button"
-                tabIndex={0}
-                onKeyPress={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    handleScrollToSection(link.to)
-                  }
-                }}
               >
                 {link.name}
-              </span>
+              </Link>
             ))}
           </nav>
           <button className="md:hidden" onClick={toggleMenu} aria-label="Toggle menu">
@@ -75,30 +75,25 @@ function Header() {
             className="md:hidden mt-4 flex flex-col space-y-4 overflow-hidden"
           >
             {navLinks.map((link) => (
-              <span
+              <Link
                 key={link.name}
+                to={link.to}
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
+                activeClass="active"
                 className="nav-link text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors block cursor-pointer"
-                onClick={() => {
-                  handleScrollToSection(link.to)
-                  setIsMenuOpen(false)
-                }}
-                role="button"
-                tabIndex={0}
-                onKeyPress={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    handleScrollToSection(link.to)
-                    setIsMenuOpen(false)
-                  }
-                }}
+                onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
-              </span>
+              </Link>
             ))}
           </motion.nav>
         )}
       </div>
     </motion.header>
-  )
+  );
 }
 
-export default Header
+export default Header;
