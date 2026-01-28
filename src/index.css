@@ -19,6 +19,12 @@ html {
 .nav-link {
   position: relative;
   display: inline-block;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #8b5cf6 !important;
 }
 
 .nav-link::after {

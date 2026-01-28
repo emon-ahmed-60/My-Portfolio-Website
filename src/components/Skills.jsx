@@ -42,9 +42,9 @@ function Skills() {
 
   return (
     <section id='skills' className="font-display bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
-      <section className="py-16 md:py-24">
+      <section className="py-16 sm:py-20 md:py-28 font-display">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

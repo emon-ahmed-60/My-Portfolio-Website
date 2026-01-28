@@ -16,20 +16,20 @@ function Contact() {
       form.current,
       import.meta.env.VITE_PUBLIC_KEY
     )
-    .then((result) => {
+      .then((result) => {
         console.log(result.text);
         setStatus('success');
         form.current.reset();
         setTimeout(() => setStatus('idle'), 3000);
-    }, (error) => {
+      }, (error) => {
         console.log(error.text);
         setStatus('error');
-    });
+      });
   };
   return (
     <section
       id="contact"
-      className="bg-background-light dark:bg-background-dark text-slate-700 dark:text-slate-300 font-sans antialiased py-20 md:py-24"
+      className="bg-background-light dark:bg-background-dark text-slate-700 dark:text-slate-300 font-sans antialiased py-16 sm:py-20 md:py-28"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
         <motion.header

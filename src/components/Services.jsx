@@ -30,7 +30,7 @@ function Services() {
     ]
 
     return (
-        <section id="services" className="w-full py-20 md:py-24 bg-background-light dark:bg-background-dark">
+        <section id="services" className="w-full py-16 sm:py-20 md:py-28 bg-background-light dark:bg-background-dark">
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ function Services() {
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {services.map((service, index) => (
                         <motion.div
                             key={index}

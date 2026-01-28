@@ -59,7 +59,7 @@ function Projects() {
   const [hoveredProject, setHoveredProject] = useState(null);
 
   return (
-    <section id="projects" className="w-full py-20 md:py-24">
+    <section id="projects" className="w-full py-16 sm:py-20 md:py-28">
       <motion.div
         initial="hidden"
         whileInView="show"
