@@ -15,10 +15,7 @@ function Header() {
     { name: 'SERVICES', to: 'services' },
     { name: 'CONTACT', to: 'contact' },
   ];
-
-  // Keep this for the logo button if needed, or convert it to Link too.
-  // Converting logo to Link for consistency is better but the prompt focused on menu items.
-  // I will keep manual handler for the logo for now as it's a specific "Scroll to home" action not part of the main nav loop in the same way.
+  
   const handleScrollToHome = () => {
     scroller.scrollTo('home', {
       smooth: true,

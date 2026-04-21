@@ -1,6 +1,13 @@
-import { motion } from 'framer-motion'
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaBootstrap, FaGithub, FaWordpress, FaFigma } from "react-icons/fa";
-import { SiTailwindcss, SiJquery, SiGreensock, SiSass, SiFirebase } from "react-icons/si";
+import { motion } from 'framer-motion';
+import { 
+  FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, 
+  FaGithub, FaWordpress, FaFigma, FaBootstrap 
+} from "react-icons/fa";
+import { 
+  SiTailwindcss, SiGreensock, SiSass, SiFirebase, 
+  SiNextdotjs, SiTypescript, SiMongodb, SiPostman, 
+  SiFramer, SiReactquery, SiAxios 
+} from "react-icons/si";
 
 function Skills() {
   const skillsData = [
@@ -10,38 +17,44 @@ function Skills() {
         { name: 'HTML/HTML5', level: 95, icon: <FaHtml5 />, color: '#E34F26' },
         { name: 'CSS/CSS3', level: 90, icon: <FaCss3Alt />, color: '#1572B6' },
         { name: 'Javascript', level: 85, icon: <FaJs />, color: '#F7DF1E' },
+        { name: 'TypeScript', level: 80, icon: <SiTypescript />, color: '#3178C6' },
+        { name: 'SASS/SCSS', level: 80, icon: <SiSass />, color: '#CC6699' },
       ],
     },
     {
       category: 'Framework/Library Skills',
       items: [
         { name: 'React Js', level: 90, icon: <FaReact />, color: '#61DAFB' },
-        { name: 'Node js/Express js', level: 75, icon: <FaNodeJs />, color: '#339933' },
+        { name: 'Next.js', level: 85, icon: <SiNextdotjs />, color: '#ffffff' },
         { name: 'Tailwind', level: 95, icon: <SiTailwindcss />, color: '#06B6D4' },
+        { name: 'Node js/Express js', level: 75, icon: <FaNodeJs />, color: '#339933' },
         { name: 'Bootstrap', level: 85, icon: <FaBootstrap />, color: '#7952B3' },
       ],
     },
     {
       category: 'Familiar Skills',
       items: [
-        { name: 'Jquery', level: 70, icon: <SiJquery />, color: '#0769AD' },
+        { name: 'React Query', level: 80, icon: <SiReactquery />, color: '#FF4154' },
+        { name: 'Axios', level: 90, icon: <SiAxios />, color: '#5A29E4' },
+        { name: 'Framer Motion', level: 85, icon: <SiFramer />, color: '#0055FF' },
         { name: 'Gsap', level: 65, icon: <SiGreensock />, color: '#88CE02' },
-        { name: 'SASS/SCSS', level: 80, icon: <SiSass />, color: '#CC6699' },
+        { name: 'MongoDB', level: 75, icon: <SiMongodb />, color: '#47A248' },
       ],
     },
     {
       category: 'Other Skills',
       items: [
+        { name: 'Figma UI/UX', level: 85, icon: <FaFigma />, color: '#F24E1E' },
         { name: 'Git/Github', level: 85, icon: <FaGithub />, color: '#E7E8E8' },
+        { name: 'Postman', level: 80, icon: <SiPostman />, color: '#FF6C37' },
         { name: 'Firebase Auth', level: 80, icon: <SiFirebase />, color: '#FFCA28' },
         { name: 'Wordpress', level: 75, icon: <FaWordpress />, color: '#21759B' },
-        { name: 'Figma UI/UX', level: 70, icon: <FaFigma />, color: '#F24E1E' },
       ],
     },
-  ]
+  ];
 
   return (
-    <section id='skills' className="font-display bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
+    <section id='skills' className="font-display bg-background-light dark:bg-[#0f172a] text-gray-800 dark:text-gray-200">
       <section className="py-16 sm:py-20 md:py-28 font-display">
         <div className="container mx-auto px-4">
           <motion.div
@@ -58,6 +71,7 @@ function Skills() {
               Check my skills list that I love to work with.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {skillsData.map((group, index) => (
               <motion.div
@@ -66,7 +80,7 @@ function Skills() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white dark:bg-gray-800 p-8 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm"
+                className="bg-white dark:bg-[#1e293b] p-8 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm"
               >
                 <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
                   {group.category}
@@ -103,7 +117,7 @@ function Skills() {
         </div>
       </section>
     </section>
-  )
+  );
 }
 
-export default Skills
+export default Skills;
