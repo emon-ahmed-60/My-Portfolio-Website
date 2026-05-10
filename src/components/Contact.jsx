@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 
 function Contact() {
   const form = useRef();
-  const [status, setStatus] = useState('idle'); // idle, sending, success, error
+  const [status, setStatus] = useState('idle'); 
 
   const sendEmail = (e) => {
     e.preventDefault();
